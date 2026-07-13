@@ -1,13 +1,14 @@
+
+// Import Express.js
+const express = require('express');
+// Create an Express app
+const app = express();
+
 const path = require('path');
 
 app.get('/privacy-policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'privacy-policy.html'));
 });
-// Import Express.js
-const express = require('express');
-
-// Create an Express app
-const app = express();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
